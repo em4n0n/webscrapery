@@ -8,3 +8,4 @@ r = requests.get("https://www.bing.com/search?q=pizza", params=params)
 
 soup = BeautifulSoup(r.text, "html.parser")
 results = soup.find("ol", {"id": "b_results"})
+links = results.findAll("Li", {"class": "b_algo"})
