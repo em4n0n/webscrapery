@@ -12,3 +12,8 @@ links = results.findAll("Li", {"class": "b_algo"})
 
 for item in links:
     item_text = item.find("a").text
+    item_href = item.find("a").attrs("href")
+
+    if item_text and item_href:
+        print(item_text)
+        print(item_href)
