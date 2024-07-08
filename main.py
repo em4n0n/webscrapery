@@ -17,4 +17,4 @@ for item in links:
     if item_text and item_href:
         print(item_text)
         print(item_href)
-        print("Parent:", item.find("a").parent)
+        print("Summary:", item.find("a").parent.parent.find("p").text)
