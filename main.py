@@ -18,6 +18,6 @@ for item in links:
         print(item_text)
         print(item_href)
     
-        children = item.children
+        children = item.children[0]
         for child in children:
             print("Child:", child)
