@@ -5,3 +5,4 @@ from io import BytesIO
 
 search = input("Search for:")
 params = {"q": search}
+r = requests.get("http://www.bing.com/images/search", params=params)
