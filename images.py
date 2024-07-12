@@ -8,3 +8,4 @@ params = {"q": search}
 r = requests.get("http://www.bing.com/images/search", params=params)
 
 soup = BeautifulSoup(r.text, "html.parser")
+links = soup.findAll("a", {"class": "thumb"})
