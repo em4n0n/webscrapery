@@ -12,4 +12,4 @@ links = soup.findAll("a", {"class": "thumb"})
 
 for item in links:
     image_obj = requests.get(item.attrs["href"])
-    
+    title = item.attrs["href"].split("/")[-1]
