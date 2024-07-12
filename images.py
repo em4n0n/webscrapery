@@ -14,3 +14,4 @@ for item in links:
     image_obj = requests.get(item.attrs["href"])
     title = item.attrs["href"].split("/")[-1]
     img = Image.open(BytesIO(image_obj).content)
+    img.save("./scraped_images" + title, img.format)
