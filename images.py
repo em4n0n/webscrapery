@@ -17,3 +17,7 @@ def StartSearch():
         title = item.attrs["href"].split("/")[-1]
         img = Image.open(BytesIO(img_obj.content))
         img.save("./scraped_images/" + title, img.format)
+
+    StartSearch()
+
+StartSearch()
