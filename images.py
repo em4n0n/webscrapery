@@ -15,8 +15,11 @@ def StartSearch():
         img_obj = requests.get(item.attrs["href"])
         print("Getting", item.attrs["href"])
         title = item.attrs["href"].split("/")[-1]
-        img = Image.open(BytesIO(img_obj.content))
-        img.save("./scraped_images/" + title, img.format)
+        try:
+            img = Image.open(BytesIO(img_obj.content))
+            img.save("./scraped_images/" + title, img.format)
+        except:
+            print("Could not save image.")
 
     StartSearch()
 
