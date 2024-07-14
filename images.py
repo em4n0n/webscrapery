@@ -7,6 +7,7 @@ import os
 def StartSearch():
     search = input("Search for:")
     params = {"q": search}
+    dir_name = search.replace(" ", "_")
     r = requests.get("http://www.bing.com/images/search", params=params)
 
     soup = BeautifulSoup(r.text, "html.parser")
